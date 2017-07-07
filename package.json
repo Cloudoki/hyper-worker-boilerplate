@@ -1,0 +1,19 @@
+{
+  "name": "backend-worker",
+  "version": "1.0.0",
+  "description": "generic backend-worker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.5.1",
+    "bookshelf": "^0.10.3",
+    "bookshelf-modelbase": "^2.10.4",
+    "bunyan": "^1.8.10",
+    "knex": "^0.13.0",
+    "mysql": "^2.13.0"
+  }
+}
