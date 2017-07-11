@@ -1,16 +1,14 @@
 'use strict'
 
+const config = require('config');
+const log = require('log');
 const mq = require('hyper-queue');
 
 const placeholder = require('lib/consumers/placeholder');
 
-const log = require('log');
-
-const config = require('config');
+mq.logger(log);
 
 mq.broker(config.queue.uri, config.queue.options, config.queue.reconnect);
-
-mq.logger(log);
 
 mq.registerCconsumers(placeholder.consumers);
 
