@@ -15,7 +15,7 @@ exports = module.exports = {
     },
     queue: {
         uri: process.env.CLDK_WORKER_QUEUE_URI || 'amqps://mq.dev.cloudoki.com',
-        reconnect: 5000,
+        reconnect: process.env.CLDK_WORKER_QUEUE_RECONNECT || 5000,
         options: {
             cert: process.env.CLDK_WORKER_QUEUE_CERT || 'ssl/cert.pem',
             key: process.env.CLDK_WORKER_QUEUE_KEY || 'ssl/key.pem',
